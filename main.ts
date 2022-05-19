@@ -649,10 +649,6 @@ function set_keys () {
         `, SpriteKind.Player)
     _15_key.setPosition(144, 40)
 }
-function doSomething () {
-    add = 0
-    add2 = false
-}
 function player2 () {
     mySprite = sprites.create(img`
         . . . . . . . . . . . . . . . . 
@@ -675,18 +671,18 @@ function player2 () {
     controller.moveSprite(mySprite)
 }
 let _33 = 0
-let _13 = 0
 let _23 = false
 let _32 = 0
-let _12 = 0
+let _13 = 0
 let _22 = false
+let _12 = 0
+let _2 = false
 let _3 = 0
 let _1 = 0
-let _2 = false
-let add3 = 0
-let mySprite: Sprite = null
-let add2 = false
 let add = 0
+let add3 = 0
+let add2 = false
+let mySprite: Sprite = null
 let _15_key: Sprite = null
 let _14_key: Sprite = null
 let _13_key: Sprite = null
@@ -705,7 +701,6 @@ let _1_key: Sprite = null
 set_background()
 set_keys()
 player2()
-doSomething()
 forever(function () {
     if (add2) {
         if (mySprite.overlapsWith(_1_key)) {
@@ -800,6 +795,26 @@ forever(function () {
             }
         }
     }
+})
+forever(function () {
+    add = 0
+    add3 = 0
+    add2 = false
+})
+forever(function () {
+    _1 = 0
+    _3 = 0
+    _2 = false
+})
+forever(function () {
+    _12 = 0
+    _3 = 0
+    _22 = false
+})
+forever(function () {
+    _13 = 0
+    _32 = 0
+    _23 = false
 })
 forever(function () {
     if (mySprite.overlapsWith(_1_key)) {
@@ -2093,20 +2108,20 @@ forever(function () {
     if (mySprite.overlapsWith(_4_key)) {
         if (_22) {
             if (controller.A.isPressed()) {
-                game.splash(_12 * _32)
+                game.splash(_12 * _33)
                 pause(5000)
                 _12 = 0
-                _32 = 0
+                _33 = 0
             }
         }
     }
     if (mySprite.overlapsWith(_5_key)) {
         if (_22) {
             if (controller.A.isPressed()) {
-                game.splash(_12 * _32)
+                game.splash(_12 * _33)
                 pause(5000)
                 _12 = 0
-                _32 = 0
+                _33 = 0
             }
         }
     }
@@ -2115,20 +2130,20 @@ forever(function () {
     if (mySprite.overlapsWith(_4_key)) {
         if (_23) {
             if (controller.A.isPressed()) {
-                game.splash(_13 / _33)
+                game.splash(_13 / _32)
                 pause(5000)
                 _13 = 0
-                _33 = 0
+                _32 = 0
             }
         }
     }
     if (mySprite.overlapsWith(_5_key)) {
         if (_23) {
             if (controller.A.isPressed()) {
-                game.splash(_13 / _33)
+                game.splash(_13 / _32)
                 pause(5000)
                 _13 = 0
-                _33 = 0
+                _32 = 0
             }
         }
     }
@@ -2204,47 +2219,47 @@ forever(function () {
     } else {
         if (mySprite.overlapsWith(_1_key)) {
             if (controller.A.isPressed()) {
-                _32 += 1
+                _33 += 1
             }
         }
         if (mySprite.overlapsWith(_2_key)) {
             if (controller.A.isPressed()) {
-                _32 += 2
+                _33 += 2
             }
         }
         if (mySprite.overlapsWith(_3_key)) {
             if (controller.A.isPressed()) {
-                _32 += 3
+                _33 += 3
             }
         }
         if (mySprite.overlapsWith(_6_key)) {
             if (controller.A.isPressed()) {
-                _32 += 4
+                _33 += 4
             }
         }
         if (mySprite.overlapsWith(_7_key)) {
             if (controller.A.isPressed()) {
-                _32 += 5
+                _33 += 5
             }
         }
         if (mySprite.overlapsWith(_8_key)) {
             if (controller.A.isPressed()) {
-                _32 += 6
+                _33 += 6
             }
         }
         if (mySprite.overlapsWith(_11_key)) {
             if (controller.A.isPressed()) {
-                _32 += 7
+                _33 += 7
             }
         }
         if (mySprite.overlapsWith(_12_key)) {
             if (controller.A.isPressed()) {
-                _32 += 8
+                _33 += 8
             }
         }
         if (mySprite.overlapsWith(_13_key)) {
             if (controller.A.isPressed()) {
-                _32 += 9
+                _33 += 9
             }
         }
     }
@@ -2299,47 +2314,47 @@ forever(function () {
     } else {
         if (mySprite.overlapsWith(_1_key)) {
             if (controller.A.isPressed()) {
-                _33 += 1
+                _32 += 1
             }
         }
         if (mySprite.overlapsWith(_2_key)) {
             if (controller.A.isPressed()) {
-                _33 += 2
+                _32 += 2
             }
         }
         if (mySprite.overlapsWith(_3_key)) {
             if (controller.A.isPressed()) {
-                _33 += 3
+                _32 += 3
             }
         }
         if (mySprite.overlapsWith(_6_key)) {
             if (controller.A.isPressed()) {
-                _33 += 4
+                _32 += 4
             }
         }
         if (mySprite.overlapsWith(_7_key)) {
             if (controller.A.isPressed()) {
-                _33 += 5
+                _32 += 5
             }
         }
         if (mySprite.overlapsWith(_8_key)) {
             if (controller.A.isPressed()) {
-                _33 += 6
+                _32 += 6
             }
         }
         if (mySprite.overlapsWith(_11_key)) {
             if (controller.A.isPressed()) {
-                _33 += 7
+                _32 += 7
             }
         }
         if (mySprite.overlapsWith(_12_key)) {
             if (controller.A.isPressed()) {
-                _33 += 8
+                _32 += 8
             }
         }
         if (mySprite.overlapsWith(_13_key)) {
             if (controller.A.isPressed()) {
-                _33 += 9
+                _32 += 9
             }
         }
     }
