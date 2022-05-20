@@ -669,6 +669,7 @@ function player2 () {
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Player)
     controller.moveSprite(mySprite)
+    mySprite.setPosition(10, 12)
 }
 let _33 = 0
 let _23 = false
@@ -701,6 +702,9 @@ let _1_key: Sprite = null
 set_background()
 set_keys()
 player2()
+forever(function () {
+    mySprite.setStayInScreen(true)
+})
 forever(function () {
     if (add2) {
         if (mySprite.overlapsWith(_1_key)) {
@@ -797,11 +801,6 @@ forever(function () {
     }
 })
 forever(function () {
-    add = 0
-    add3 = 0
-    add2 = false
-})
-forever(function () {
     _1 = 0
     _3 = 0
     _2 = false
@@ -815,6 +814,11 @@ forever(function () {
     _13 = 0
     _32 = 0
     _23 = false
+})
+forever(function () {
+    add = 0
+    add3 = 0
+    add2 = false
 })
 forever(function () {
     if (mySprite.overlapsWith(_1_key)) {
@@ -2057,7 +2061,7 @@ forever(function () {
     if (mySprite.overlapsWith(_4_key)) {
         if (add2) {
             if (controller.A.isPressed()) {
-                game.splash(add + add3)
+                mySprite.sayText(add + add3)
                 pause(5000)
                 add3 = 0
                 add = 0
@@ -2086,7 +2090,7 @@ forever(function () {
     if (mySprite.overlapsWith(_4_key)) {
         if (_2) {
             if (controller.A.isPressed()) {
-                game.splash(_1 - _3)
+                mySprite.sayText(_1 - _3)
                 pause(5000)
                 _3 = 0
                 _1 = 0
@@ -2106,44 +2110,44 @@ forever(function () {
 })
 forever(function () {
     if (mySprite.overlapsWith(_4_key)) {
-        if (_22) {
+        if (_23) {
             if (controller.A.isPressed()) {
-                game.splash(_12 * _33)
+                mySprite.sayText(_13 / _32)
                 pause(5000)
-                _12 = 0
-                _33 = 0
+                _13 = 0
+                _32 = 0
             }
         }
     }
     if (mySprite.overlapsWith(_5_key)) {
-        if (_22) {
+        if (_23) {
             if (controller.A.isPressed()) {
-                game.splash(_12 * _33)
+                game.splash(_13 / _32)
                 pause(5000)
-                _12 = 0
-                _33 = 0
+                _13 = 0
+                _32 = 0
             }
         }
     }
 })
 forever(function () {
     if (mySprite.overlapsWith(_4_key)) {
-        if (_23) {
+        if (_22) {
             if (controller.A.isPressed()) {
-                game.splash(_13 / _32)
+                mySprite.sayText(_12 * _33)
                 pause(5000)
-                _13 = 0
-                _32 = 0
+                _12 = 0
+                _33 = 0
             }
         }
     }
     if (mySprite.overlapsWith(_5_key)) {
-        if (_23) {
+        if (_22) {
             if (controller.A.isPressed()) {
-                game.splash(_13 / _32)
+                game.splash(_12 * _33)
                 pause(5000)
-                _13 = 0
-                _32 = 0
+                _12 = 0
+                _33 = 0
             }
         }
     }
